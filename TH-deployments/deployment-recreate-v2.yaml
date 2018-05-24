@@ -1,0 +1,23 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: hybris-app-deployment
+spec:
+  replicas: 5
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app: hybris
+  template:
+    metadata:
+      labels:
+        app: hybris
+        version: v2.0.0
+    spec:
+      containers:
+      - name: hybris-app
+        image: heflik/hybris:v2
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80

@@ -1,0 +1,8 @@
+apiVersion: v1
+appVersion: "1.0"
+description: A sample chart showcasing deployment automation using canary deployment method
+name: canary
+version: 0.1.0
+maintainers:
+  - name: Jakub Błaszczyk
+    email: jakub.blaszczyk@sap.com

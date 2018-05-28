@@ -1,0 +1,9 @@
+---
+image:
+  replicas: 5
+  name: heflik/hybris
+  tag: v1
+  port: 80
+service:
+  port: 31000
+  nodePort: 32000

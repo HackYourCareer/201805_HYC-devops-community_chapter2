@@ -1,0 +1,17 @@
+---
+image:
+  replicas: 2
+  name: heflik/hybris
+  tag: v1
+  port: 80
+
+canary:
+  enabled: False
+  replicas: 1
+  name: heflik/hybris
+  tag: v2
+  port: 80
+
+service:
+  port: 31000
+  nodePort: 32001

@@ -1,0 +1,20 @@
+{{- if .Values.canary.enabled -}}
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-hybris-canary
+spec:
+  replicas: {{ .Values.canary.replicas }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}-hybris-app
+    spec:
+      containers:
+      - name: {{ .Release.Name }}-hybris-app
+        image: "{{ .Values.canary.name }}:{{ .Values.canary.tag }}"
+        imagePullPolicy: Always
+        ports:
+        - containerPort: {{ .Values.canary.port }}
+{{- end -}}

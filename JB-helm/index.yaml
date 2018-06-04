@@ -1,3 +1,30 @@
 apiVersion: v1
-entries: {}
-generated: 2018-06-04T11:13:44.186268086+02:00
+entries:
+  canary:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2018-06-04T11:21:18.599254334+02:00
+    description: A sample chart showcasing deployment automation using canary deployment
+      method
+    digest: d52ef52c3ad396397743118284cba8f713149a5c7ec19584eed21061794ddfd3
+    maintainers:
+    - email: jakub.blaszczyk@sap.com
+      name: Jakub Błaszczyk
+    name: canary
+    urls:
+    - canary-0.1.0.tgz
+    version: 0.1.0
+  rolling:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2018-06-04T11:21:18.599495061+02:00
+    description: A sample chart showcasing deployment automation
+    digest: 367a4e81ca967e3144b1f23a2c921f0bfb485f70d034b481f44d28d3be5d6f3a
+    maintainers:
+    - email: jakub.blaszczyk@sap.com
+      name: Jakub Błaszczyk
+    name: rolling
+    urls:
+    - rolling-0.1.0.tgz
+    version: 0.1.0
+generated: 2018-06-04T11:21:18.598702566+02:00
